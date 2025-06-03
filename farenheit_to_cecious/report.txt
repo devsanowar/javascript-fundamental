@@ -1,0 +1,24 @@
+
+function farenheitToCelcious(farenheit){
+    return 5/9 * (farenheit-32);
+}
+
+let x = farenheitToCelcious(100)
+document.getElementById('farenheit_to_celcious').innerHTML = x;
+
+
+এখানে এই ফাংশনটি নাম farenheitToCelcious এটি একটি ফারেনহাইট মান গ্রহন করে ( (এখানে farenheit এর মান রাখা হয়েছে ) তারপর সেই মানকে সেলসিয়াসে রুপান্তর করে রিটার্ন করা হয়েছে।
+
+তারপর getElementById('farenheit_to_celcious') এর মাধ্যমে HTML আইডি কে ধরে তার মাধ্যমে ভ্যালু শো করানো হয়েছে ভিউ ফাইলে।
+
+
+
+HTML code:
+========================
+<body>
+   <p id="farenheit_to_celcious"></p>
+
+    <script src="custom.js"></script>
+</body>
+
+বিঃদ্রঃ এখানে ফারেনহাইট থেকে সেলসিয়াসে রুপান্তর করার সূত্র ঃ  5/9 * (farenheit-32)
