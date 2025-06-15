@@ -6,7 +6,8 @@
     <title>Object Method</title>
 </head>
 <body>
-    <h2 id="collage"></h2>
+    <h2 id="school"></h2>
+    <h4 id="collage"></h4>
     <p id="demo"></p>
     <script>
         const person = {
@@ -21,15 +22,24 @@
 
         document.getElementById('demo').innerHTML = person.fullName();
 
+
+
         // Lowercase to uppercase convertion
-        const collage = {
+        const educationalInstitution = {
+            mySchoolName : "Ghatail model school.",
             collageName : "Ghatail cantonment public school and collage."
         }
-        collage.upCase = function () {
+
+        
+        // Property added with expression
+        let name = "mySchoolName";
+
+        educationalInstitution.upCase = function () {
             return (this.collageName).toUpperCase();
         }
 
-        document.getElementById('collage').innerHTML = collage.upCase();
+        document.getElementById('school').innerHTML = educationalInstitution[name];
+        document.getElementById('collage').innerHTML = educationalInstitution.upCase();
     </script>
 </body>
 </html>
