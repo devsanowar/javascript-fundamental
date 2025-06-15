@@ -6,6 +6,7 @@
     <title>Object Method</title>
 </head>
 <body>
+    <h2 id="collage"></h2>
     <p id="demo"></p>
     <script>
         const person = {
@@ -14,10 +15,21 @@
         }
 
         person.fullName = function () {
-            return "My name is " + person.firstName + person.lastName;
+            // return "My name is " + person.firstName + person.lastName;
+            return "My name is " + this.firstName + " " + this.lastName;
         }
 
         document.getElementById('demo').innerHTML = person.fullName();
+
+        // Lowercase to uppercase convertion
+        const collage = {
+            collageName : "Ghatail cantonment public school and collage."
+        }
+        collage.upCase = function () {
+            return (this.collageName).toUpperCase();
+        }
+
+        document.getElementById('collage').innerHTML = collage.upCase();
     </script>
 </body>
 </html>
