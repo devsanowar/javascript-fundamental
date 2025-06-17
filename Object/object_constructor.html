@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+<h2 style="text-align: center;">Object Constructor</h2>
+<p style="text-align: center;" id="person"></p>
+
+<script>
+
+    // Constructor Function for Person objects
+
+    function Person(first, last, age, eyeColor){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eyeColor
+    }
+
+    let person = new Person("Md Sanwoar", "Hossen", "30", "black");
+    document.getElementById('person').innerHTML = "My name is " + person.firstName + "," +"I am " + " " + person.age + " " + "old" + "," + " " + "My eye color is " + " " + person.eyeColor + ".";
+
+</script>
+</body>
+</html>
