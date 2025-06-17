@@ -31,10 +31,13 @@
     let person = new Person("Md Sanwoar", "Hossen", "30", "black");
     let person2 = new Person("Md Mabin", "Mia", "30", "black");
 
+    // Add a new Property
+    Person.prototype.nationality = "Bangladeshi";
+
 
     document.getElementById('person').innerHTML = "My name is " + person.firstName + "," +"I am " + " " + person.age + " " + "old" + "," + " " + "My eye color is " + " " + person.eyeColor + ".";
 
-    document.getElementById('person2').innerHTML = "My name is " + person2.firstName + "," +"I am " + " " + person2.age + " " + "old" + "," + " " + "My eye color is " + " " + person2.eyeColor + "," + " " + "I am" + " " + person2.region + ".";
+    document.getElementById('person2').innerHTML = "My name is " + person2.firstName + "," +"I am " + " " + person2.age + " " + "old" + "," + " " + "My eye color is " + " " + person2.eyeColor + "," + " " + "I am" + " " + person2.region + "." + " " + person2.nationality;
 
 </script>
 </body>
