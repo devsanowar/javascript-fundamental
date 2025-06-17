@@ -8,8 +8,12 @@
 <body>
 <h2 style="text-align: center;">Object Constructor</h2>
 <p style="text-align: center;" id="person"></p>
+<p style="text-align: center;" id="person2"></p>
 
 <script>
+    //Sometimes we need to create many objects of the same type.
+    // To create an object type we use an object constructor function.
+    // It is considered good practice to name constructor functions with an upper-case first letter.
 
     // Constructor Function for Person objects
 
@@ -21,7 +25,12 @@
     }
 
     let person = new Person("Md Sanwoar", "Hossen", "30", "black");
+    let person2 = new Person("Md Mabin", "Mia", "30", "black");
+
+
     document.getElementById('person').innerHTML = "My name is " + person.firstName + "," +"I am " + " " + person.age + " " + "old" + "," + " " + "My eye color is " + " " + person.eyeColor + ".";
+
+    document.getElementById('person2').innerHTML = "My name is " + person2.firstName + "," +"I am " + " " + person2.age + " " + "old" + "," + " " + "My eye color is " + " " + person2.eyeColor + ".";
 
 </script>
 </body>
