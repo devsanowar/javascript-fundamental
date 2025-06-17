@@ -9,6 +9,7 @@
 <h2 style="text-align: center;">Object Constructor</h2>
 <p style="text-align: center;" id="person"></p>
 <p style="text-align: center;" id="person2"></p>
+<p style="text-align: center;" id="fullname"></p>
 
 <script>
     //Sometimes we need to create many objects of the same type.
@@ -23,7 +24,12 @@
         this.age = age;
         this.eyeColor = eyeColor;
         // Property Default value
-        this.region = "Muslim"
+        this.region = "Muslim";
+        
+        // A constructor function can also have methods:
+        this.fullName = function(){
+            return "My Name is" + " " + this.firstName + " " + this.lastName;
+        }
     }
 
     //কনস্ট্রাক্টর ফাংশনের মধ্যে this-এর কোনো নির্দিষ্ট মান থাকে না। যখন একটি নতুন অবজেক্ট তৈরি করা হয়, তখন this ওই নতুন অবজেক্টকে বোঝায়।
@@ -38,6 +44,8 @@
     document.getElementById('person').innerHTML = "My name is " + person.firstName + "," +"I am " + " " + person.age + " " + "old" + "," + " " + "My eye color is " + " " + person.eyeColor + ".";
 
     document.getElementById('person2').innerHTML = "My name is " + person2.firstName + "," +"I am " + " " + person2.age + " " + "old" + "," + " " + "My eye color is " + " " + person2.eyeColor + "," + " " + "I am" + " " + person2.region + "." + " " + person2.nationality;
+
+    document.getElementById('fullname').innerHTML = person.fullName();
 
 </script>
 </body>
