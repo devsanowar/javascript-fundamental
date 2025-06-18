@@ -9,7 +9,10 @@
 
     <!-- When click the button then show the result -->
     <button id="clickBtn">ক্লিক করুন</button>
-    
+
+    <!-- When input field change then show the result -->
+     <input type="text" name="" id="nameInput" placeholder="Write your name">
+
     <script>
         const handleClick = () => { // ES6 এর এরো ফাংশন 
             alert('বাটনে ক্লিক করা হয়েছে');
@@ -17,6 +20,11 @@
 
         document.getElementById('clickBtn').addEventListener('click', handleClick);
 
+        const handleChange = () => {
+            alert("You changed the input text");
+        }
+
+        document.getElementById('nameInput').addEventListener('change', handleChange);
 
     </script>
 </body>
