@@ -13,6 +13,11 @@
     <!-- When input field change then show the result -->
      <input type="text" name="" id="nameInput" placeholder="Write your name">
 
+     <!-- Mouseover and Mouseout -->
+      <div id="hoverBox" style="width:200px; height:100px; border:1px solid black;">
+            এখানে মাউস আনুন
+      </div>
+
     <script>
         const handleClick = () => { // ES6 এর এরো ফাংশন 
             alert('বাটনে ক্লিক করা হয়েছে');
@@ -20,12 +25,29 @@
 
         document.getElementById('clickBtn').addEventListener('click', handleClick);
 
+        //When input field change then show message
         const handleChange = () => {
             alert("You changed the input text");
         }
 
         document.getElementById('nameInput').addEventListener('change', handleChange);
 
+        // Mouse over and out
+        const hoberBox = document.getElementById('hoverBox');
+
+        const handleMouseOver = () => {
+            hoberBox.style.backgroundColor = "green";
+            hoberBox.style.color = "black"
+        }
+
+        const handleMouseOut = () =>{
+            hoberBox.style.backgroundColor = "red";
+            hoberBox.style.color = "white"
+        }
+
+
+        hoberBox.addEventListener('mouseover', handleMouseOver);
+        hoberBox.addEventListener('mouseout', handleMouseOut);
     </script>
 </body>
 </html>
