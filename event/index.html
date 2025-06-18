@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Event</title>
+</head>
+<body>
+
+    <!-- When click the button then show the result -->
+    <button id="clickBtn">ক্লিক করুন</button>
+    
+    <script>
+        const handleClick = () => { // ES6 এর এরো ফাংশন 
+            alert('বাটনে ক্লিক করা হয়েছে');
+        };
+
+        document.getElementById('clickBtn').addEventListener('click', handleClick);
+
+
+    </script>
+</body>
+</html>
